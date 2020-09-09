@@ -6,9 +6,13 @@
 trigger: none
 
 pr:
- branches:
-   include: master
- drafts: false
+  branches:
+    include:
+    - master
+    - releases/*
+    exclude:
+    - releases/old*
+  drafts: false
 
 pool: "Default"
 
